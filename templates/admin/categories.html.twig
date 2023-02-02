@@ -1,15 +1,18 @@
 {% extends 'admin/base.html.twig' %}
 
 {% block customstylesheets %}
+
     {{ parent() }}
     <style>
         .fa-ul>li {
             margin-top: 15px;
         }
     </style>
+
 {% endblock %}
 
 {% block mainadmin %}
+
 <h2>Categories list</h2>
 
 <ul class="fa-ul text-left">
@@ -69,4 +72,5 @@
         <button class="btn btn-primary mt-3" type="submit">Add</button>
     </div>
 </form>
+
 {% endblock %}

@@ -4,11 +4,12 @@
     <link rel="stylesheet" href="{{ asset('assets/css/fontawesome.min.css') }}">
 {% endblock %}
 
-{% block title %}Manchester United Gallery App - Admin panel{% endblock %}
+{% block title %}English Premier League Videos - Admin panel{% endblock %}
 
 {% block menu %}{% endblock %}
 
 {% block main %}
+
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
         <h5 class="my-0 mr-md-auto font-weight-normal">Awesome Videos</h5>
         <a class="nav-link active" href="{{ path('app_main_page') }}"> Go to public site</a>
@@ -61,17 +62,23 @@
             <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                 <h1 class="h2"><a href="{{ path('app_admin_main_page') }}">Dashboard</a></h1>
             </div>
-            //admin panel
+
 {% block mainadmin %}{% endblock %}
+
         </main>
+
 {% endblock %}
+
 {% block footer_links %}{% endblock %}
- {% block customjavascripts %}
-            <script>
-    $('input[type="file"]').change(function (e) {
-        var fileName = e.target.files[0].name;
-        console.log(e.target.files[0]);
-        $('.custom-file-label').html(fileName);
-    });
-</script>
-        {% endblock %}
+
+{% block customjavascripts %}
+
+    <script>
+        $('input[type="file"]').change(function (e) {
+            var fileName = e.target.files[0].name;
+            console.log(e.target.files[0]);
+            $('.custom-file-label').html(fileName);
+        });
+    </script>
+
+{% endblock %}
